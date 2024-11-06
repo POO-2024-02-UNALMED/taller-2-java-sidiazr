@@ -14,7 +14,7 @@ public class Auto {
 	int cantidadAsientos() {
 		
 		int cantAsientos = 0;
-		for (int i = 0; i <= asientos.length; i++) {
+		for (int i = 0; i < asientos.length; i++) {
 			if (asientos[i] != null) {
 				cantAsientos++;
 				}
@@ -28,7 +28,9 @@ public class Auto {
 		boolean es_original = true;
 		int registroReal = asientos[0].registro;
 		
-		for (int i = 0; i <= asientos.length; i++) {
+		for (int i = 0; i < asientos.length; i++) {
+			
+			if (asientos[i] != null) {
 			
 			if (asientos[i].registro != registroReal) {
 				es_original = false;
@@ -38,7 +40,8 @@ public class Auto {
 				
 			}
 		}
-		
+			
+	}
 		if (es_original == false) {
 			return "Las piezas no son originales";
 		} else {
